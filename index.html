@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmku.com</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/movie-projector.png" alt="icon" class="logo">
+        <h1>Filmku.com</h1>
+    </header>
+
+    <!-- Login and Register Forms -->
+    <section class="login-form">
+        <h2>Login</h2>
+        <input type="email" id="login-email" placeholder="Email">
+        <input type="password" id="login-password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p>Belum punya akun? <a href="javascript:void(0)" onclick="showRegister()">Daftar</a></p>
+    </section>
+
+    <section class="register-form" style="display: none;">
+        <h2>Register</h2>
+        <input type="email" id="register-email" placeholder="Email">
+        <input type="password" id="register-password" placeholder="Password">
+        <button onclick="register()">Daftar</button>
+        <p>Sudah punya akun? <a href="javascript:void(0)" onclick="showLogin()">Login</a></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Filmku.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html><!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmku.com - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/movie-projector.png" alt="icon" class="logo">
+        <h1>Filmku.com</h1>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <!-- Search Bar for Film Search -->
+    <section class="search-form">
+        <input type="text" id="search" placeholder="Cari judul film..." oninput="filterFilms()">
+    </section>
+
+    <!-- Add Film Form (Visible only for admin) -->
+    <section class="add-film-form" style="display: none;">
+        <h2>Tambah Film</h2>
+        <input type="text" id="film-title" placeholder="Judul Film">
+        <input type="file" id="film-poster" accept="image/*">
+        <button onclick="addFilm()">Tambah Film</button>
+    </section>
+
+    <!-- Film List Section -->
+    <section id="film-list">
+        <!-- Film cards will be displayed here -->
+    </section>
+
+    <footer>
+        <p>© 2025 Filmku.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
